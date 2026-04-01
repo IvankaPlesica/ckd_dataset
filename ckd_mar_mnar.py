@@ -24,7 +24,7 @@ mnar = mnar_test(df, exclude_cols=["class"])
 print(f"Full dataset — mean AUC: {round(sum(mar.values())/len(mar), 4)}")
 print(f"MNAR strong: {[c for c,v in mnar.items() if v['signal']=='strong']}")
 
-# ── per subgroup ──────────────────────────────────────────────────────────────
+# per subgroup
 
 subgroup_results = {}
 print("\nPer subgroup:")
