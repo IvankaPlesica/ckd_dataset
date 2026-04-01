@@ -13,7 +13,7 @@ from ckd_data import load_ckd
 df = load_ckd()
 
 
-# ── eGFR (CKD-EPI 2021, sex-agnostic) ────────────────────────────────────────
+# eGFR (CKD-EPI 2021, sex-agnostic)
 
 def compute_egfr(row):
     sc  = pd.to_numeric(row["sc"],  errors="coerce")
