@@ -19,7 +19,7 @@ def mar_test(df, exclude_cols=None):
     from all other columns using SemSynth's logistic regression pipeline.
     Returns AUC per column.
     """
-    df    = df.drop(columns=exclude_cols or [], errors="ignore")
+    df = df.drop(columns=exclude_cols or [], errors="ignore")
     model = fit_missingness_model(df)
 
     results = {}
@@ -41,7 +41,7 @@ def mnar_test(df, exclude_cols=None, threshold=0.2):
     in missing rows using linear regression on other numeric columns.
     Returns relative difference between predicted and observed mean.
     """
-    df       = df.drop(columns=exclude_cols or [], errors="ignore")
+    df = df.drop(columns=exclude_cols or [], errors="ignore")
     num_cols = df.select_dtypes(include="number").columns.tolist()
     results  = {}
 
@@ -52,10 +52,10 @@ def mnar_test(df, exclude_cols=None, threshold=0.2):
         present = df[col].notna()
         missing = df[col].isna()
         medians = df[other].median()
-        X_p     = df.loc[present, other].fillna(medians)
-        X_m     = df.loc[missing,  other].fillna(medians)
-        y_p     = df.loc[present, col]
-        pred    = LinearRegression().fit(X_p, y_p).predict(X_m)
+        X_p = df.loc[present, other].fillna(medians)
+        X_m = df.loc[missing,  other].fillna(medians)
+        y_p = df.loc[present, col]
+        pred = LinearRegression().fit(X_p, y_p).predict(X_m)
         rel_diff = abs(pred.mean() - y_p.mean()) / (abs(y_p.mean()) + 1e-9)
         results[col] = {
             "present_mean":   round(float(y_p.mean()), 3),
