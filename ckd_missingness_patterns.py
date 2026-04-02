@@ -52,7 +52,6 @@ apriori_rules = mine_apriori(M)
 print(f"  Rules found: {len(apriori_rules)}")
 
 # PyAerial
-
 def mine_aerial(M, missing_cols, epochs=50):
     print(f"  Training autoencoder ({epochs} epochs)...")
     trained = aerial_model.train(M.astype(str), epochs=epochs)
@@ -64,28 +63,28 @@ def mine_aerial(M, missing_cols, epochs=50):
         and r["consequent"]["value"] == "True"
     ]
 
-    marginal = {col: float(M[col].mean()) for col in missing_cols}
+    marginal = M.mean()
+
     rules_out = []
     for r in co_miss:
-        ant_cols  = [a["feature"] for a in r["antecedents"]]
-        cons_col  = r["consequent"]["feature"]
-        ant_sup   = marginal.get(ant_cols[0], 0) if len(ant_cols) == 1 \
-                    else float(M[ant_cols].all(axis=1).mean())
-        cons_sup  = marginal.get(cons_col, 0)
+        ant_cols = [a["feature"] for a in r["antecedents"]]
+        cons_col = r["consequent"]["feature"]
+        ant_sup = M[ant_cols].all(axis=1).mean() if len(ant_cols) > 1 else marginal[ant_cols[0]]
+        cons_sup = marginal[cons_col]
         joint_sup = float(r["support"])
-        denom     = ant_sup * cons_sup
-        lift      = round(joint_sup / denom, 3) if denom > 0 else None
+        lift = round(joint_sup / (ant_sup * cons_sup), 3) if ant_sup * cons_sup > 0 else None
 
         rules_out.append({
             "if_missing":    ant_cols,
             "then_missing":  cons_col,
-            "support":       round(float(r["support"]), 4),
+            "support":       round(joint_sup, 4),
             "confidence":    round(float(r["confidence"]), 4),
             "lift":          lift,
             "zhangs_metric": round(float(r["zhangs_metric"]), 4),
         })
 
     rules_out.sort(key=lambda x: (-x["confidence"], -x["support"]))
+    return rules_out, result["statistics"]
     return rules_out, result["statistics"]
 
 print("Running PyAerial...")
