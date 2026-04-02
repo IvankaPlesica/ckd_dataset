@@ -1,0 +1,503 @@
+{
+  "full_dataset": {
+    "mar": {
+      "age": 0.7707,
+      "bp": 0.7743,
+      "sg": 0.8972,
+      "al": 0.8005,
+      "su": 0.8806,
+      "rbc": 0.7579,
+      "pc": 0.7933,
+      "pcc": 0.9381,
+      "ba": 0.8775,
+      "bgr": 0.7127,
+      "bu": 0.6377,
+      "sc": 0.7434,
+      "sod": 0.7188,
+      "pot": 0.6868,
+      "hemo": 0.6115,
+      "pcv": 0.6683,
+      "wbcc": 0.7532,
+      "rbcc": 0.7251,
+      "htn": 0.9623,
+      "dm": 0.9598,
+      "cad": 0.9673,
+      "appet": 1.0,
+      "pe": 1.0,
+      "ane": 1.0
+    },
+    "mnar": {
+      "age": {
+        "present_mean": 51.483,
+        "predicted_mean": 51.959,
+        "relative_diff": 0.0092,
+        "signal": "weak"
+      },
+      "bp": {
+        "present_mean": 76.469,
+        "predicted_mean": 74.67,
+        "relative_diff": 0.0235,
+        "signal": "weak"
+      },
+      "sg": {
+        "present_mean": 1.017,
+        "predicted_mean": 1.016,
+        "relative_diff": 0.0017,
+        "signal": "weak"
+      },
+      "al": {
+        "present_mean": 1.017,
+        "predicted_mean": 1.432,
+        "relative_diff": 0.4077,
+        "signal": "strong"
+      },
+      "su": {
+        "present_mean": 0.45,
+        "predicted_mean": 0.568,
+        "relative_diff": 0.2615,
+        "signal": "strong"
+      },
+      "bgr": {
+        "present_mean": 148.037,
+        "predicted_mean": 152.852,
+        "relative_diff": 0.0325,
+        "signal": "weak"
+      },
+      "bu": {
+        "present_mean": 57.426,
+        "predicted_mean": 47.628,
+        "relative_diff": 0.1706,
+        "signal": "weak"
+      },
+      "sc": {
+        "present_mean": 3.072,
+        "predicted_mean": 2.252,
+        "relative_diff": 0.2669,
+        "signal": "strong"
+      },
+      "sod": {
+        "present_mean": 137.529,
+        "predicted_mean": 137.318,
+        "relative_diff": 0.0015,
+        "signal": "weak"
+      },
+      "pot": {
+        "present_mean": 4.627,
+        "predicted_mean": 4.277,
+        "relative_diff": 0.0756,
+        "signal": "weak"
+      },
+      "hemo": {
+        "present_mean": 12.526,
+        "predicted_mean": 12.747,
+        "relative_diff": 0.0176,
+        "signal": "weak"
+      },
+      "pcv": {
+        "present_mean": 38.884,
+        "predicted_mean": 36.768,
+        "relative_diff": 0.0544,
+        "signal": "weak"
+      },
+      "wbcc": {
+        "present_mean": 8406.122,
+        "predicted_mean": 8573.465,
+        "relative_diff": 0.0199,
+        "signal": "weak"
+      },
+      "rbcc": {
+        "present_mean": 4.707,
+        "predicted_mean": 4.343,
+        "relative_diff": 0.0775,
+        "signal": "weak"
+      }
+    }
+  },
+  "subgroups": {
+    "early_ckd": {
+      "n": 42,
+      "mean_auc": 0.9078,
+      "mnar_strong": [],
+      "mar": {
+        "bp": 1.0,
+        "sg": 1.0,
+        "rbc": 0.756,
+        "pc": 1.0,
+        "bgr": 0.9677,
+        "sod": 0.8795,
+        "pot": 0.875,
+        "hemo": 0.8281,
+        "pcv": 0.8889,
+        "wbcc": 0.9059,
+        "rbcc": 0.8847
+      },
+      "mnar": {
+        "bp": {
+          "present_mean": 80.541,
+          "predicted_mean": 75.57,
+          "relative_diff": 0.0617,
+          "signal": "weak"
+        },
+        "bgr": {
+          "present_mean": 155.323,
+          "predicted_mean": 129.439,
+          "relative_diff": 0.1666,
+          "signal": "weak"
+        },
+        "sod": {
+          "present_mean": 136.8,
+          "predicted_mean": 139.369,
+          "relative_diff": 0.0188,
+          "signal": "weak"
+        },
+        "pot": {
+          "present_mean": 3.975,
+          "predicted_mean": 3.8,
+          "relative_diff": 0.044,
+          "signal": "weak"
+        },
+        "hemo": {
+          "present_mean": 12.331,
+          "predicted_mean": 12.485,
+          "relative_diff": 0.0124,
+          "signal": "weak"
+        },
+        "pcv": {
+          "present_mean": 38.6,
+          "predicted_mean": 36.623,
+          "relative_diff": 0.0512,
+          "signal": "weak"
+        },
+        "wbcc": {
+          "present_mean": 8796.0,
+          "predicted_mean": 7802.314,
+          "relative_diff": 0.113,
+          "signal": "weak"
+        },
+        "rbcc": {
+          "present_mean": 4.724,
+          "predicted_mean": 4.345,
+          "relative_diff": 0.0801,
+          "signal": "weak"
+        }
+      }
+    },
+    "mid_ckd": {
+      "n": 122,
+      "mean_auc": 0.8268,
+      "mnar_strong": [
+        "su"
+      ],
+      "mar": {
+        "bp": 0.9958,
+        "sg": 0.9231,
+        "al": 0.9086,
+        "su": 0.9138,
+        "rbc": 0.839,
+        "pc": 0.805,
+        "bgr": 0.8338,
+        "bu": 1.0,
+        "sod": 0.7248,
+        "pot": 0.6868,
+        "hemo": 0.6827,
+        "pcv": 0.7562,
+        "wbcc": 0.7382,
+        "rbcc": 0.7673
+      },
+      "mnar": {
+        "sg": {
+          "present_mean": 1.014,
+          "predicted_mean": 1.014,
+          "relative_diff": 0.0002,
+          "signal": "weak"
+        },
+        "al": {
+          "present_mean": 1.67,
+          "predicted_mean": 1.54,
+          "relative_diff": 0.0781,
+          "signal": "weak"
+        },
+        "su": {
+          "present_mean": 0.856,
+          "predicted_mean": 0.674,
+          "relative_diff": 0.2129,
+          "signal": "strong"
+        },
+        "bgr": {
+          "present_mean": 191.319,
+          "predicted_mean": 189.032,
+          "relative_diff": 0.012,
+          "signal": "weak"
+        },
+        "sod": {
+          "present_mean": 135.519,
+          "predicted_mean": 134.903,
+          "relative_diff": 0.0045,
+          "signal": "weak"
+        },
+        "pot": {
+          "present_mean": 4.31,
+          "predicted_mean": 4.268,
+          "relative_diff": 0.0097,
+          "signal": "weak"
+        },
+        "hemo": {
+          "present_mean": 11.009,
+          "predicted_mean": 11.036,
+          "relative_diff": 0.0025,
+          "signal": "weak"
+        },
+        "pcv": {
+          "present_mean": 34.011,
+          "predicted_mean": 33.927,
+          "relative_diff": 0.0025,
+          "signal": "weak"
+        },
+        "wbcc": {
+          "present_mean": 9543.243,
+          "predicted_mean": 9661.678,
+          "relative_diff": 0.0124,
+          "signal": "weak"
+        },
+        "rbcc": {
+          "present_mean": 4.027,
+          "predicted_mean": 3.975,
+          "relative_diff": 0.0129,
+          "signal": "weak"
+        }
+      }
+    },
+    "late_ckd": {
+      "n": 66,
+      "mean_auc": 0.8742,
+      "mnar_strong": [
+        "al",
+        "pot"
+      ],
+      "mar": {
+        "bp": 1.0,
+        "sg": 0.8025,
+        "al": 0.8631,
+        "su": 0.8319,
+        "rbc": 0.8274,
+        "pc": 0.8533,
+        "bgr": 0.8596,
+        "bu": 0.9692,
+        "sod": 0.9435,
+        "pot": 0.9475,
+        "hemo": 0.8668,
+        "pcv": 0.842,
+        "wbcc": 0.836,
+        "rbcc": 0.7958
+      },
+      "mnar": {
+        "sg": {
+          "present_mean": 1.013,
+          "predicted_mean": 1.012,
+          "relative_diff": 0.0011,
+          "signal": "weak"
+        },
+        "al": {
+          "present_mean": 2.49,
+          "predicted_mean": 1.948,
+          "relative_diff": 0.2177,
+          "signal": "strong"
+        },
+        "su": {
+          "present_mean": 0.857,
+          "predicted_mean": 1.002,
+          "relative_diff": 0.1696,
+          "signal": "weak"
+        },
+        "bgr": {
+          "present_mean": 156.0,
+          "predicted_mean": 157.162,
+          "relative_diff": 0.0075,
+          "signal": "weak"
+        },
+        "pot": {
+          "present_mean": 5.982,
+          "predicted_mean": 0.605,
+          "relative_diff": 0.8988,
+          "signal": "strong"
+        },
+        "hemo": {
+          "present_mean": 9.176,
+          "predicted_mean": 9.674,
+          "relative_diff": 0.0542,
+          "signal": "weak"
+        },
+        "pcv": {
+          "present_mean": 28.077,
+          "predicted_mean": 27.992,
+          "relative_diff": 0.003,
+          "signal": "weak"
+        },
+        "wbcc": {
+          "present_mean": 8497.778,
+          "predicted_mean": 8373.279,
+          "relative_diff": 0.0147,
+          "signal": "weak"
+        },
+        "rbcc": {
+          "present_mean": 3.5,
+          "predicted_mean": 3.399,
+          "relative_diff": 0.0287,
+          "signal": "weak"
+        }
+      }
+    },
+    "triple_comorbidity": {
+      "n": 24,
+      "mean_auc": 0.9843,
+      "mnar_strong": [
+        "al",
+        "su"
+      ],
+      "mar": {
+        "sg": 1.0,
+        "al": 1.0,
+        "su": 1.0,
+        "rbc": 0.979,
+        "pc": 1.0,
+        "bgr": 1.0,
+        "pot": 1.0,
+        "hemo": 1.0,
+        "pcv": 1.0,
+        "wbcc": 0.9664,
+        "rbcc": 0.8824
+      },
+      "mnar": {
+        "sg": {
+          "present_mean": 1.014,
+          "predicted_mean": 1.004,
+          "relative_diff": 0.0102,
+          "signal": "weak"
+        },
+        "al": {
+          "present_mean": 2.765,
+          "predicted_mean": 4.747,
+          "relative_diff": 0.717,
+          "signal": "strong"
+        },
+        "su": {
+          "present_mean": 1.882,
+          "predicted_mean": 4.08,
+          "relative_diff": 1.1673,
+          "signal": "strong"
+        },
+        "wbcc": {
+          "present_mean": 8858.824,
+          "predicted_mean": 9770.495,
+          "relative_diff": 0.1029,
+          "signal": "weak"
+        },
+        "rbcc": {
+          "present_mean": 3.541,
+          "predicted_mean": 2.851,
+          "relative_diff": 0.1949,
+          "signal": "weak"
+        }
+      }
+    },
+    "notckd": {
+      "n": 150,
+      "mean_auc": 0.8349,
+      "mnar_strong": [],
+      "mar": {
+        "age": 1.0,
+        "bp": 0.9865,
+        "sg": 0.7531,
+        "al": 0.7531,
+        "su": 0.7531,
+        "rbc": 0.7234,
+        "pc": 0.7234,
+        "pcc": 0.8733,
+        "ba": 0.8733,
+        "bgr": 0.772,
+        "bu": 0.7014,
+        "sc": 0.6621,
+        "sod": 0.7379,
+        "pot": 0.7683,
+        "hemo": 0.8472,
+        "pcv": 0.8185,
+        "wbcc": 0.8432,
+        "rbcc": 0.8422,
+        "htn": 0.8682,
+        "dm": 0.8682,
+        "cad": 0.8682,
+        "appet": 1.0,
+        "pe": 1.0,
+        "ane": 1.0
+      },
+      "mnar": {
+        "sg": {
+          "present_mean": 1.022,
+          "predicted_mean": 1.022,
+          "relative_diff": 0.0,
+          "signal": "weak"
+        },
+        "al": {
+          "present_mean": 0.0,
+          "predicted_mean": 0.0,
+          "relative_diff": 0.0,
+          "signal": "weak"
+        },
+        "su": {
+          "present_mean": 0.0,
+          "predicted_mean": 0.0,
+          "relative_diff": 0.0,
+          "signal": "weak"
+        },
+        "bgr": {
+          "present_mean": 107.722,
+          "predicted_mean": 111.177,
+          "relative_diff": 0.0321,
+          "signal": "weak"
+        },
+        "bu": {
+          "present_mean": 32.799,
+          "predicted_mean": 32.312,
+          "relative_diff": 0.0148,
+          "signal": "weak"
+        },
+        "sc": {
+          "present_mean": 0.869,
+          "predicted_mean": 0.866,
+          "relative_diff": 0.0029,
+          "signal": "weak"
+        },
+        "sod": {
+          "present_mean": 141.731,
+          "predicted_mean": 142.599,
+          "relative_diff": 0.0061,
+          "signal": "weak"
+        },
+        "pot": {
+          "present_mean": 4.338,
+          "predicted_mean": 4.412,
+          "relative_diff": 0.017,
+          "signal": "weak"
+        },
+        "hemo": {
+          "present_mean": 15.188,
+          "predicted_mean": 14.959,
+          "relative_diff": 0.0151,
+          "signal": "weak"
+        },
+        "wbcc": {
+          "present_mean": 7705.594,
+          "predicted_mean": 7422.085,
+          "relative_diff": 0.0368,
+          "signal": "weak"
+        },
+        "rbcc": {
+          "present_mean": 5.379,
+          "predicted_mean": 5.315,
+          "relative_diff": 0.012,
+          "signal": "weak"
+        }
+      }
+    }
+  }
+}
